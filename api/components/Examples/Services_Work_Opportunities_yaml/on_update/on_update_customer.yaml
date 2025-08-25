@@ -1,0 +1,260 @@
+value:
+  context:
+    domain: ONDC:ONEST10
+    action: on_update
+    version: 2.0.0
+    bap_id: worker-hub.bap.io
+    bap_uri: https://worker-hub.bap.io
+    bpp_id: job-hub.bpp.io
+    bpp_uri: https://job-hub.bpp.io
+    transaction_id: a9aaecca-10b7-4d19-b640-b047a7c62195
+    message_id: 8cbb5e99-5d06-4855-81e9-a4fc8013dbff
+    location:
+      city:
+        code: std:080
+      country:
+        code: IND
+    timestamp: "2024-09-04T12:34:56.214Z"
+    ttl: PT30S
+  message:
+    order:
+      id: "1677140405881"
+      status: Active
+      provider:
+        id: "1"
+      items:
+        - id: 0253719F295521CED39EC9C2F3C8DCDE
+          fulfillment_ids:
+            - "F3"
+          tags:
+            - descriptor:
+                code: NP_FEES
+              list:
+                - code: ID
+                  value: "1"
+            - descriptor:
+                code: NP_FEES
+              list:
+                - code: ID
+                  value: "2"
+            - descriptor:
+                code: ACADEMIC_QUALIFICATIONS
+              list:
+                - descriptor:
+                    code: COURSE_NAME
+                  value: Class-X
+                - descriptor:
+                    code: MIN_PERCENTAGE
+                  value: "60"
+                - descriptor:
+                    code: MANDATORY_ELIGIBILITY
+                  value: "true"
+            - descriptor:
+                code: ACADEMIC_QUALIFICATIONS
+              list:
+                - descriptor:
+                    code: COURSE_NAME
+                  value: Class-XII
+                - descriptor:
+                    code: MIN_PERCENTAGE
+                  value: "60"
+                - descriptor:
+                    code: MANDATORY_ELIGIBILITY
+                  value: "true"
+            - descriptor:
+                code: ACADEMIC_QUALIFICATIONS
+              list:
+                - descriptor:
+                    code: COURSE_LEVEL
+                  value: Under Graduate
+                - descriptor:
+                    code: MIN_PERCENTAGE
+                  value: "60"
+                - descriptor:
+                    code: MANDATORY_ELIGIBILITY
+                  value: "true"
+            - descriptor:
+                code: ACADEMIC_QUALIFICATIONS
+              list:
+                - descriptor:
+                    code: COURSE_LEVEL
+                  value: Graduate
+                - descriptor:
+                    code: MANDATORY_ELIGIBILITY
+                  value: "false"
+            - descriptor:
+                code: JOB_REQUIREMENTS
+              list:
+                - descriptor:
+                    code: REQ_EXPERIENCE
+                  value: "P2Y6M"
+                - descriptor:
+                    code: ADD_PROF_SKILL
+                  value: dev-ops
+                - descriptor:
+                    code: ADD_PROF_SKILL
+                  value: android-development
+                - descriptor:
+                    code: REQ_ADDL_SKILL
+                  value: >-
+                    8+ years of engineering experience in shipping user-facing
+                    production features
+            - descriptor:
+                code: JOB_RESPONSIBILITIES
+              list:
+                - descriptor:
+                    code: RESPONSIBILITY
+                  value: >-
+                    Build frontend experiences for tools (Web, PWA, React
+                    Native)
+                - descriptor:
+                    code: RESPONSIBILITY
+                  value: Define long-term technical direction and vision
+                - descriptor:
+                    code: RESPONSIBILITY
+                  value: >-
+                    Create reliable interfaces using modern tools like React,
+                    React Native, Typescript, Node.js, Jest, and Webpack.
+                - descriptor:
+                    code: RESPONSIBILITY
+                  value: >-
+                    Mentor team members on design techniques and coding
+                    standards.
+            - descriptor:
+                code: JOB_DETAILS
+              list:
+                - descriptor:
+                    code: JOB_TYPE
+                  value: Full-Time
+                - descriptor:
+                    code: JOB_ROLE
+                  value: DevOps Engineer
+      fulfillments:
+        - id: "F3"
+          type: "lead & recruitment"
+          state:
+            descriptor:
+              code: OFFER_EXTENDED 
+            updated_at: "2023-02-23T08:20:06.214Z"
+          customer:
+            person:
+              name: Sanjay
+              gender: Male
+              age: "35"
+              skills:
+                - name: Android
+                - name: AWS
+              languages:
+                - name: en
+                - name: ml
+                - name: hi
+              creds:
+                - id: "D1"
+                  descriptor:
+                    name: "PAN_CARD"
+                    short_desc: "PAN Card information"
+                    long_desc: "Permanent Account Number"
+                  url: "https://example.com/pan_card.jpeg"
+                  type: "jpeg"
+                - id: "D2"
+                  descriptor:
+                    name: "AADHAAR_CARD"
+                    short_desc: "Aadhaar Card information"
+                    long_desc: "Unique Identification Number"
+                  url: "https://example.com/aadhaar_card.jpeg"
+                  type: "pdf"
+                - id: "D3"
+                  descriptor:
+                    name: "VOTER_ID"
+                    short_desc: "Voter ID information"
+                    long_desc: "Election Commission ID"
+                  url: "https://example.com/voter_id.jpeg"
+                  type: "jpeg"
+                - id: "D4"
+                  descriptor:
+                    name: "PASSPORT"
+                    short_desc: "Passport information"
+                    long_desc: "International Travel Document"
+                  url: "https://example.com/passport.jpeg"
+                  type: "jpeg"
+                - id: "D5"
+                  descriptor:
+                    name: "DRIVING_LICENSE"
+                    short_desc: "Driving License information"
+                    long_desc: "License to Drive"
+                  url: "https://example.com/driving_license.jpeg"
+                  type: "jpeg"
+                - id: "D6"
+                  descriptor:
+                    name: "RESUME"
+                    short_desc: "Summary of qualifications, work experience, and education."
+                    long_desc: "A comprehensive document showcasing an individual's career achievements, skills, work history, education, certifications, and professional experience."
+                  url: "https://example.com/resume.pdf"
+                  type: "pdf"
+            contact:
+              phone: "+91-9876543210"
+              email: "bac@xyz.com"
+      quote:
+        price:
+          currency: INR
+          value: "1150"
+        breakup:
+          - item:
+              id: "0253719F295521CED39EC9C2F3C8DCDE"
+              price:
+                currency: INR
+                value: "1100"
+              title: "item"
+          - item:
+              id: "0253719F295521CED39EC9C2F3C8DCDE"
+              price:
+                currency: INR
+                value: "50"
+              title: "tax"
+        ttl: "P1D"
+      payments:
+        - params:
+            currency: "INR"
+            transaction_id: "3937"
+            amount: "1150.00"
+          status: "PAID"
+          type: "ON-ORDER"
+          collected_by: "BAP"
+          tags:
+            descriptor:
+              code: "SETTLEMENT_DETAILS"
+            list:
+              - descriptor:
+                  code: "SETTLEMENT_COUNTERPARTY"
+                value: "seller-app"
+              - descriptor:
+                  code: "SETTLEMENT_PHASE"
+                value: "sale-amount"
+              - descriptor:
+                  code: "SETTLEMENT_TYPE"
+                value: "neft"
+              - descriptor:
+                  code: "SETTLEMENT_BASIS"
+                value: "lead & recruitment"
+              - descriptor:
+                  code: "SETTLEMENT_WINDOW"
+                value: "P3M"
+              - descriptor:
+                  code: "SETTLEMENT_BANK_ACCOUNT_NO"
+                value: "XXXXXXXXXX"
+              - descriptor:
+                  code: "SETTLEMENT_IFSC_CODE"
+                value: "XXXXXXXXX"
+              - descriptor:
+                  code: "BENEFICIARY_NAME"
+                value: "xxxxx"
+              - descriptor:
+                  code: "BANK_NAME"
+                value: "xxxx"
+              - descriptor:
+                  code: "BRANCH_NAME"
+                value: "xxxx"
+      documents:
+        - url: "https://offer_letter_url"
+          label: "OFFER_LETTER"
+      updated_at: "2024-09-04T12:34:56.214Z"

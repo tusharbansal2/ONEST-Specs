@@ -1,0 +1,165 @@
+intent:
+  item:
+    tags:
+      - code: JOB_DETAILS
+        description: Employment Type
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./tag.yaml#/JOB_TYPE"
+  tags:
+    - code: BAP_TERMS
+      description: Employment Type
+      reference: <PR/Issue/Discussion Links md format text>
+      list:
+        $ref: "./tag.yaml#/JOB_TYPE"
+    - code: CATALOG_INC
+      description: Incremental catalog
+      reference: <PR/Issue/Discussion Links md format text>
+      list:
+        $ref: "./tag.yaml#/CATALOG_INC"
+catalog:
+  providers:
+    tags:
+      - code: LOCATION
+        description: Provider Location
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./tag.yaml#/LOCATION"
+      - code: NP_FEES
+        description: NP_FEES
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./tag.yaml#/NP_FEES"
+      - code: SALARY
+        description: SALARY
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./tag.yaml#/SALARY"
+    items:
+      tags:
+        - code: JOB_DETAILS
+          description: JOB_DETAILS
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/JOB_DETAILS"
+        - code: ACADEMIC_QUALIFICATIONS
+          description: ACADEMIC_QUALIFICATIONS
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/ACADEMIC_QUALIFICATIONS"
+        - code: DOC_REQUIREMENTS
+          description: DOC_REQUIREMENTS
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/DOC_REQUIREMENTS"
+        - code: TIMING
+          description: TIMING
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/TIMING"
+        - code: JOB_REQUIREMENTS
+          description: JOB_REQUIREMENTS
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/JOB_REQUIREMENTS"
+        - code: JOB_RESPONSIBILITIES
+          description: JOB_RESPONSIBILITIES
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/JOB_RESPONSIBILITIES"
+        - code: COMPENSATION
+          description: COMPENSATION
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/COMPENSATION"
+        - code: NP_FEES
+          description: NP_FEES
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./tag.yaml#/NP_FEES"
+
+order:
+  items:
+    tags:
+      - code: NP_FEES
+        description: NP_FEES
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./tag.yaml#/NP_FEES_SELECT"
+  payments: &ref1
+    tags:
+      - code: SETTLEMENT_DETAILS
+        description: Define Payment Settlement Details here (Required)
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./tag.yaml#/Settlement_Details"
+
+selectItem:
+  - code: NP_FEES
+    description: NP_FEES
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/NP_FEES_SELECT"
+initPersonTags:
+  - code: EMP_DETAILS
+    description: EMP_DETAILS
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/EMP_DETAILS"
+
+  - code: ACADEMIC_QUALIFICATIONS
+    description: ACADEMIC_QUALIFICATIONS
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/ACADEMIC_QUALIFICATION"
+
+  - code: ONLINE_LEARNING_AND_SPECIALIZATIONS
+    description: ONLINE_LEARNING_AND_SPECIALIZATIONS
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/ONLINE_LEARNING_AND_SPECIALIZATIONS"
+
+  - code: WORK_EXPERIENCE
+    description: WORK_EXPERIENCE
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/WORK_EXPERIENCE"
+
+  - code: TECHNICAL_SKILLS
+    description: TECHNICAL_SKILLS
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/TECHNICAL_SKILLS"
+
+  - code: SKILLS
+    description: SKILLS
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/SKILLS"
+
+  - code: DIGITAL_FOOTPRINT
+    description: DIGITAL_FOOTPRINT
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/DIGITAL_FOOTPRINT"
+
+onInitSETTLEMENT_DETAILS:
+  - code: SETTLEMENT_DETAILS
+    description: SETTLEMENT_DETAILS
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/SETTLEMENT_DETAILS"
+
+SETTLEMENT_DETAILS: 
+  - code: SETTLEMENT_DETAILS
+    description: Define Payment Settlement Details here (Required)
+    reference: <PR/Issue/Discussion Links md format text>
+    list:
+      $ref: "./tag.yaml#/Settlement_Details"
+
+QUOTE_TRAIL:
+- code: QUOTE_TRAIL
+  description: Quote trail of the items in quote.breakup
+  reference: <PR/Issue/Discussion Links md format text>
+  list:
+    $ref: "./tag.yaml#/QUOTE_TRAIL"

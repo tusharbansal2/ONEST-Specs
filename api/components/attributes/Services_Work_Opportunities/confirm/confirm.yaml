@@ -1,0 +1,268 @@
+context:
+  parent: true
+  domain:
+    description: "The domain of the ONDC network."
+    required: mandatory
+    usage: "ONDC:ONEST10"
+    reference: null
+  action:
+    description: "The action being performed in the ONDC flow."
+    required: mandatory
+    usage: "confirm"
+    reference: null
+  version:
+    description: "The version of the ONDC API being used."
+    required: mandatory
+    usage: "2.0.0"
+    reference: null
+  bap_id:
+    description: "The unique identifier of the Buyer Application Provider (BAP)."
+    required: mandatory
+    usage: "worker-hub.bap.io"
+    reference: null
+  bap_uri:
+    description: "The URI of the Buyer Application Provider (BAP)."
+    required: mandatory
+    usage: "https://worker-hub.bap.io"
+    reference: null
+  bpp_id:
+    description: "The unique identifier of the Provider (BPP)."
+    required: mandatory
+    usage: "job-hub.bpp.io"
+    reference: null
+  bpp_uri:
+    description: "The URI of the Provider (BPP)."
+    required: mandatory
+    usage: "https://job-hub.bpp.io"
+    reference: null
+  transaction_id:
+    description: "The unique transaction identifier for the operation."
+    required: mandatory
+    usage: "a9aaecca-10b7-4d19-b640-b047a7c62195"
+    reference: null
+  message_id:
+    description: "The unique identifier of the message in the ONDC flow."
+    required: mandatory
+    usage: "481a01fc-4b45-4d49-9558-c6a7dfad8b75"
+    reference: null
+  location:
+    city:
+      code:
+        description: "The city code in the ONDC ecosystem."
+        required: mandatory
+        usage: "std:080"
+        reference: null
+    country:
+      code:
+        description: "The country code in the ONDC ecosystem."
+        required: mandatory
+        usage: "IND"
+        reference: null
+  timestamp:
+    description: "The timestamp of the operation in ISO 8601 format."
+    required: mandatory
+    usage: "2023-02-23T08:09:21.161Z"
+    reference: null
+  ttl:
+    description: "The Time-to-Live (TTL) of the operation in ISO 8601 duration format."
+    required: mandatory
+    usage: "PT30S"
+    reference: null
+message:
+  parent: true
+  order:
+    parent: true
+    id:
+      description: "The unique identifier of the order."
+      required: mandatory
+      usage: "1677140405881"
+      reference: null
+    status:
+      description: "The current status of the order."
+      required: mandatory
+      usage: "Created"
+      reference: null
+    provider:
+      id:
+        description: "The unique identifier of the provider offering the service."
+        required: mandatory
+        usage: "1"
+        reference: null
+    items:
+      id:
+        description: "The unique identifier of the item being selected."
+        required: mandatory
+        usage: "0253719F295521CED39EC9C2F3C8DCDE"
+        reference: null
+      fulfillment_ids:
+        description: "Fulfillment ID associated with the item."
+        required: mandatory
+        usage: "F1"
+        reference: null
+    fulfillments:
+        id:
+          description: "The unique identifier of the fulfillment option."
+          required: mandatory
+          usage: "F1"
+          reference: null
+        type:
+          description: "Type of fulfillment"
+          required: mandatory
+          usage: "lead"
+          reference: null
+        state:
+          descriptor:
+            code:
+              description: Fulfillment state code
+              required: mandatory
+              usage: APPLICATION_SUBMITTED
+              reference: if any
+          updated_at:
+            description: Last state update timestamp
+            required: mandatory
+            usage: "2023-02-06T09:55:41.161Z"
+            reference: if any
+        customer:
+          person:
+            name:
+              description: "The name of the customer."
+              required: mandatory
+              usage: "Sanjay"
+              reference: null
+            gender:
+              description: "The gender of the customer."
+              required: mandatory
+              usage: "Male"
+              reference: null
+            age:
+              description: "The age of the customer."
+              required: mandatory
+              usage: "35"
+              reference: null
+            skills:
+              name:
+                description: "The code of the skill."
+                required: mandatory
+                usage: "Android"
+                reference: null
+            languages:
+              name:
+                description: "The language code."
+                required: mandatory
+                usage: "en"
+                reference: null
+            creds:
+                id:
+                  description: "The unique identifier for the credential."
+                  required: mandatory
+                  usage: "D1"
+                  reference: null
+                descriptor:
+                  name:
+                    description: "The name of the credential (e.g., PAN_CARD)."
+                    required: mandatory
+                    usage: "PAN_CARD"
+                    reference: null
+                  short_desc:
+                    description: "A brief description of the credential (e.g., PAN Card information)."
+                    required: mandatory
+                    usage: "PAN Card information"
+                    reference: null
+                  long_desc:
+                    description: "A detailed explanation of the credential (e.g., Permanent Account Number)."
+                    required: mandatory
+                    usage: "Permanent Account Number"
+                    reference: null
+                url:
+                  description: "The URL where the credential image or file is hosted."
+                  required: mandatory
+                  usage: "https://example.com/pan_card.jpeg"
+                  reference: null
+                type:
+                  description: "The type of the credential file (e.g., file format such as jpeg, pdf)."
+                  required: mandatory
+                  usage: "jpeg"
+                  reference: null
+          contact:
+            phone:
+              description: "The phone number of the customer."
+              required: mandatory
+              usage: "+91-1234567890"
+              reference: null
+            email:
+              description: "The email of the customer."
+              required: mandatory
+              usage: "abc@xyz.com"
+              reference: null
+    quote:
+      ttl:
+        description: "The Time-to-Live (TTL) for the quoted order."
+        required: mandatory
+        usage: "P1D"
+        reference: null
+      price:
+        currency:
+          description: "The currency of the quoted price."
+          required: mandatory
+          usage: "INR"
+          reference: null
+        value:
+          description: "The value of the quoted price."
+          required: mandatory
+          usage: "1150"
+          reference: null
+      breakup:
+        item:
+          id:
+            description: "The unique identifier for the quote breakup item."
+            required: mandatory
+            usage: "0253719F295521CED39EC9C2F3C8DCDE"
+            reference: null
+          price:
+            currency:
+              description: "The currency of the breakup price."
+              required: mandatory
+              usage: "INR"
+              reference: null
+            value:
+              description: "The value of the breakup price."
+              required: mandatory
+              usage: "1150"
+              reference: null
+          title:
+            description: "The title of the breakup item."
+            required: mandatory
+            usage: "item"
+            reference: null
+    payments:
+      params:
+        currency:
+          description: "The currency used for the transaction."
+          required: mandatory
+          usage: "INR"
+          reference: null
+        transaction_id:
+          description: "The ID of the transaction."
+          required: mandatory
+          usage: "3937"
+          reference: null
+        amount:
+          description: "The transaction amount."
+          required: mandatory
+          usage: "1150.00"
+          reference: null
+      status:
+        description: "The payment status."
+        required: mandatory
+        usage: "PAID"
+        reference: null
+      type:
+        description: "The type of payment."
+        required: mandatory
+        usage: "ON-ORDER"
+        reference: null
+      collected_by:
+        description: "Entity collecting the payment."
+        required: mandatory
+        usage: "BAP"
+        reference: null

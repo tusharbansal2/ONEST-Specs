@@ -1,0 +1,47 @@
+fulfillments:
+  type:
+    - code: lead
+      description: How the job will be fullfilled	
+      reference: <PR/Issue/Discussion Links md format text>
+    - code: recruitment
+      description: How the job will be fullfilled	
+      reference: <PR/Issue/Discussion Links md format text>
+    - code: lead & recruitment
+      description: How the job will be fullfilled	
+      reference: <PR/Issue/Discussion Links md format text>
+  state:
+    descriptor:
+      code:
+        - code: APPLICATION_ACCEPTED
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: APPLICATION_REJECTED
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: ASSESSMENT_IN_PROGRESS
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: OFFER_ACCEPTED
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: OFFER_REJECTED
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: OFFER_EXTENDED
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: CANCELLED
+          description: Name of the fulfillment status	
+          reference: <PR/Issue/Discussion Links md format text>
+  customer:
+    person:
+      gender:
+        - code: Male
+          description: Gender of the job applicant
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: Female
+          description: Gender of the job applicant
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: Other
+          description: Gender of the job applicant
+          reference: <PR/Issue/Discussion Links md format text>

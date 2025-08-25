@@ -1,0 +1,162 @@
+value:
+  context:
+    domain: ONDC:ONEST10
+    action: on_init
+    version: 2.0.0
+    bap_id: worker-hub.bap.io
+    bap_uri: https://worker-hub.bap.io
+    bpp_id: job-hub.bpp.io
+    bpp_uri: https://job-hub.bpp.io
+    transaction_id: a9aaecca-10b7-4d19-b640-b047a7c62195
+    message_id: af58aa7b-6745-47d0-9b0d-62dcb262ee87
+    location:
+      city:
+        code: std:080
+      country:
+        code: IND
+    timestamp: "2023-02-23T10:14:05.214Z"
+    ttl: PT30S
+  message:
+    order:
+      provider:
+        id: "1"
+      items:
+        - id: 0253719F295521CED39EC9C2F3C8DCDE
+          fulfillment_ids:
+            - "F3"
+          xinput:
+            required: true
+            head:
+              descriptor:
+                name: Application Form
+              index:
+                min: 1
+                cur: 1
+                max: 2
+              headings:
+                - Candidate Details
+            form:
+              mime_type: text/html
+              url: >-
+                https://6vs8xnx5i7.jobhub.co.in/loans-kyc/xinput/formid/a23f2fdfbbb8ac402bfd54f-1
+              resubmit: false
+          tags:
+            - descriptor:
+                code: NP_FEES
+              list:
+                - code: ID
+                  value: "1"
+            - descriptor:
+                code: NP_FEES
+              list:
+                - code: ID
+                  value: "2"
+      quote:
+        price:
+          currency: INR
+          value: "1150"
+        breakup:
+          - item:
+              id: "0253719F295521CED39EC9C2F3C8DCDE"
+              price:
+                  currency: INR
+                  value: "1100"
+              title: "item"
+          - item:
+              id: "0253719F295521CED39EC9C2F3C8DCDE"
+              price:
+                  currency: INR
+                  value: "50"
+              title: "tax"
+        ttl: "P1D"
+      fulfillments:
+        - id: "F3"
+          type: "lead & recruitment"
+          state:
+            descriptor:
+              code: APPLICATION_IN_PROGRESS
+            updated_at: "2023-02-23T10:14:05.214Z"
+          customer:
+            person:
+              name: Sanjay
+              gender: Male
+              age: "35"
+              skills:
+                - name: Android
+                - name: AWS
+              languages:
+                - name: en
+                - name: ml
+                - name: hi
+              creds:
+                - id: "D1"
+                  descriptor:
+                    name: "PAN_CARD"
+                    short_desc: "PAN Card information"
+                    long_desc: "Permanent Account Number"
+                  url: "https://example.com/pan_card.jpeg"
+                  type: "jpeg"
+                - id: "D2"
+                  descriptor:
+                    name: "AADHAAR_CARD"
+                    short_desc: "Aadhaar Card information"
+                    long_desc: "Unique Identification Number"
+                  url: "https://example.com/aadhaar_card.jpeg"
+                  type: "pdf"
+                - id: "D3"
+                  descriptor:
+                    name: "VOTER_ID"
+                    short_desc: "Voter ID information"
+                    long_desc: "Election Commission ID"
+                  url: "https://example.com/voter_id.jpeg"
+                  type: "jpeg"
+                - id: "D4"
+                  descriptor:
+                    name: "PASSPORT"
+                    short_desc: "Passport information"
+                    long_desc: "International Travel Document"
+                  url: "https://example.com/passport.jpeg"
+                  type: "jpeg"
+                - id: "D5"
+                  descriptor:
+                    name: "DRIVING_LICENSE"
+                    short_desc: "Driving License information"
+                    long_desc: "License to Drive"
+                  url: "https://example.com/driving_license.jpeg"
+                  type: "jpeg"
+                - id: "D6"
+                  descriptor:
+                    name: "RESUME"
+                    short_desc: "Summary of qualifications, work experience, and education."
+                    long_desc: "A comprehensive document showcasing an individual's career achievements, skills, work history, education, certifications, and professional experience."
+                  url: "https://example.com/resume.pdf"
+                  type: "pdf"
+            contact:
+              phone: "+91-1234567890"
+              email: abc@xyz.com
+      payments:
+        - status: "NOT-PAID"
+          type: "ON-ORDER"
+          collected_by: "BAP"
+          tags:
+              descriptor:
+                code: "SETTLEMENT_DETAILS"
+              list:
+                - descriptor:
+                    code: "SETTLEMENT_COUNTERPARTY"
+                  value: "seller-app"
+                - descriptor:
+                    code: "SETTLEMENT_BANK_ACCOUNT_NO"
+                  value: "XXXXXXXXXX"
+                - descriptor:
+                    code: "SETTLEMENT_IFSC_CODE"
+                  value: "XXXXXXXXX"
+                - descriptor:
+                    code: "BENEFICIARY_NAME"
+                  value: "xxxxx"
+                - descriptor:
+                    code: "BANK_NAME"
+                  value: "xxxx"
+                - descriptor:
+                    code: "BRANCH_NAME"
+                  value: "xxxx"

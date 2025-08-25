@@ -1,0 +1,219 @@
+context:
+  parent: true
+  domain:
+    description: Updated domain namespace defined here
+    required: mandatory
+    usage: ONDC:ONEST10
+    reference: if any
+  action:
+    description: Enum
+    required: mandatory
+    usage: on_init
+    reference: if any
+  version:
+    description: Current live version
+    required: mandatory
+    usage: 2.0.0
+    reference: if any
+  bap_id:
+    description: Subscriber ID of buyer app
+    required: mandatory
+    usage: worker-hub.bap.io
+    reference: if any
+  bap_uri:
+    description: Subscriber URI of buyer app
+    required: mandatory
+    usage: https://worker-hub.bap.io
+    reference: if any
+  bpp_id:
+    description: Subscriber ID of BPP
+    required: mandatory
+    usage: job-hub.bpp.io
+    reference: if any
+  bpp_uri:
+    description: Subscriber URI of BPP
+    required: mandatory
+    usage: https://job-hub.bpp.io
+    reference: if any
+  transaction_id:
+    description: Unique string for each request trail
+    required: mandatory
+    usage: a9aaecca-10b7-4d19-b640-b047a7c62195
+    reference: if any
+  message_id:
+    description: Unique string for each message
+    required: mandatory
+    usage: af58aa7b-6745-47d0-9b0d-62dcb262ee87
+    reference: if any
+  location:
+    city:
+      code:
+        description: City code for location
+        required: mandatory
+        usage: std:080
+        reference: if any
+    country:
+      code:
+        description: Country code in ISO standard
+        required: mandatory
+        usage: IND
+        reference: if any
+  timestamp:
+    description: RFC3339 compliant timestamp
+    required: mandatory
+    usage: "2023-02-23T10:14:05.324Z"
+    reference: if any
+  ttl:
+    description: Time-to-live for the message
+    required: mandatory
+    usage: PT30S
+    reference: if any
+message:
+  parent: true
+  order:
+    parent: true
+    provider:
+      parent: true
+      id:
+        description: Unique identifier for the provider
+        required: mandatory
+        usage: 1
+        reference: if any
+    items:
+      parent: true
+      id:
+        description: Item ID
+        required: mandatory
+        usage: 0253719F295521CED39EC9C2F3C8DCDE
+        reference: if any
+      fulfillment_ids:
+        description: Fulfillment ID associated with the item
+        required: mandatory
+        usage: F1
+        reference: if any
+      xinput: 
+        "'required'":
+          description: Indicates if input is required
+          required: mandatory
+          usage: TRUE
+          reference: if any
+        head:
+          descriptor:
+            name:
+              description: Form descriptor name
+              required: mandatory
+              usage: Application Form
+              reference: if any
+          index:
+            min:
+              description: Minimum index value
+              required: mandatory
+              usage: 1
+              reference: if any
+            cur:
+              description: Current index value
+              required: mandatory
+              usage: 1
+              reference: if any
+            max:
+              description: Maximum index value
+              required: mandatory
+              usage: 2
+              reference: if any
+          headings:
+              description: Heading title
+              required: mandatory
+              usage: Candidate Details
+              reference: if any
+        form:
+          mime_type:
+            description: MIME type of the form
+            required: mandatory
+            usage: text/html
+            reference: if any
+          url:
+            description: Form URL
+            required: mandatory
+            usage: https://6vs8xnx5i7.jobhub.co.in/loans-kyc/xinput/formid/a23f2fdfbbb8ac402bfd54f-1
+            reference: if any
+          resubmit:
+            description: Indicates if resubmission is allowed
+            required: mandatory
+            usage: FALSE
+            reference: if any
+    quote:
+      parent: true
+      ttl:
+        description: Time-to-live for the quote
+        required: mandatory
+        usage: P1D
+        reference: if any
+      price:
+        currency:
+          description: Currency of the quote price
+          required: mandatory
+          usage: INR
+          reference: if any
+        value:
+          description: Value of the quote price
+          required: mandatory
+          usage: 1100
+          reference: if any
+      breakup:
+        item:
+          id:
+            description: "The unique identifier for the quote breakup item."
+            required: mandatory
+            usage: "0253719F295521CED39EC9C2F3C8DCDE"
+            reference: null
+          price:
+            currency:
+              description: "The currency of the breakup price."
+              required: mandatory
+              usage: "INR"
+              reference: null
+            value:
+              description: "The value of the breakup price."
+              required: mandatory
+              usage: "1150"
+              reference: null
+          title:
+            description: "The title of the breakup item."
+            required: mandatory
+            usage: "item"
+            reference: null
+    fulfillments:
+      id:
+        description: "The unique identifier of the fulfillment option."
+        required: mandatory
+        usage: "F1"
+        reference: null
+      type:
+        description: "The type of fulfillment."
+        required: mandatory
+        usage: "lead"
+        reference: null
+      state:
+          descriptor:
+            code:
+              description: Fulfillment state code
+              required: mandatory
+              usage: APPLICATION_IN_PROGRESS
+              reference: if any
+          updated_at:
+            description: Last state update timestamp
+            required: mandatory
+            usage: "2023-02-23T08:20:16.324Z"
+            reference: if any
+    payments:
+      parent: true
+      type:
+        description: "The type of payment."
+        required: mandatory
+        usage: "ON-ORDER"
+        reference: null
+      collected_by:
+        description: "Entity collecting the payment."
+        required: mandatory
+        usage: "BAP"
+        reference: null

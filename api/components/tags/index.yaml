@@ -1,0 +1,79 @@
+search:
+  message:
+    intent:
+        $ref: "./TagGroup.yaml#/intent"
+on_search:
+  message:
+    catalog:
+      $ref: "./TagGroup.yaml#/catalog"
+
+select:
+  message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+
+on_select:
+  message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+
+init:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      fulfillments:
+        customer:
+          person:
+            $ref: "./TagGroup.yaml#/initPersonTags"
+            
+on_init:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      payments:
+        $ref: "./TagGroup.yaml#/onInitSETTLEMENT_DETAILS"
+
+confirm:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      payments:
+        $ref: "./TagGroup.yaml#/SETTLEMENT_DETAILS"
+
+on_confirm:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      payments:
+        $ref: "./TagGroup.yaml#/SETTLEMENT_DETAILS"
+
+on_status:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      payments:
+        $ref: "./TagGroup.yaml#/SETTLEMENT_DETAILS"
+
+on_cancel:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      payments:
+        $ref: "./TagGroup.yaml#/SETTLEMENT_DETAILS" 
+      fulfillments:
+        $ref: "./TagGroup.yaml#/QUOTE_TRAIL"
+on_update:
+   message:
+    order:
+      item:
+        $ref: "./TagGroup.yaml#/selectItem"
+      payments:
+        $ref: "./TagGroup.yaml#/SETTLEMENT_DETAILS"

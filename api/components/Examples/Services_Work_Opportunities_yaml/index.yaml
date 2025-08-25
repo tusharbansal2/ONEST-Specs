@@ -1,0 +1,90 @@
+search:
+  examples:
+    search - by job role:
+      $ref: ./search/search_by_job_role.yaml
+    search - by job provider:
+      $ref: ./search/search_by_job_provider.yaml
+    search - by location of the job:
+      $ref: ./search/search_by_job_location.yaml
+    search - by category:
+      $ref: ./search/search_by_category.yaml
+    search - by employment type:
+      $ref: ./search/search_by_employment_type.yaml
+    search - incremental start:
+      $ref: ./search/search_inc_start.yaml
+    search - incremental stop:
+      $ref: ./search/search_inc_stop.yaml
+select:
+  examples:
+    select:
+      $ref: ./select/select.yaml
+init:
+  examples:
+    init:
+      $ref: ./init/init.yaml
+confirm:
+  examples:
+    confirm:
+      $ref: ./confirm/confirm.yaml
+update:
+  examples:
+    update - contact_info:
+      $ref: ./update/update_customer.yaml
+    update - offer_info:
+      $ref: ./update/update.yaml
+status:
+  examples:
+    status:
+      $ref: ./status/status.yaml
+cancel:
+  examples:
+    cancel:
+      $ref: ./cancel/cancel.yaml
+on_search:
+  examples:
+    on_search - by job role:
+      $ref: ./on_search/on_search_by_role_name.yaml
+    on_search - by job provider:
+      $ref: ./on_search/on_search_by_job_provider.yaml
+    on_search - by location of the job:
+      $ref: ./on_search/on_search_by_job_location.yaml
+    on_search - by category:
+      $ref: ./on_search/on_search_by_category.yaml
+    on_search - by employment type:
+      $ref: ./on_search/on_search_by_employment_type.yaml
+    on_search - incremental:
+      $ref: ./on_search/on_search_inc.yaml
+on_select:
+  examples:
+    on_select:
+      $ref: ./on_select/on_select.yaml
+on_init:
+  examples:
+    on_init:
+      $ref: ./on_init/on_init.yaml
+    on_init - unsolicited:
+      $ref: ./on_init/on_init_unsolicited.yaml
+    on_init - unsolicited2:
+      $ref: ./on_init/on_init_unsolicited2.yaml
+on_confirm:
+  examples:
+    on_confirm:
+      $ref: ./on_confirm/on_confirm.yaml
+on_update:
+  examples:
+    on_update - unsolicited:
+      $ref: ./on_update/on_update_unsolicited.yaml
+    on_update - contact_info:
+      $ref: ./on_update/on_update_customer.yaml
+    on_update - offer_info:
+      $ref: ./on_update/on_update.yaml
+on_status:
+  examples:
+    on_status - APPLICATION_ACCEPTED:
+      $ref: ./on_status/on_status.yaml
+    on_status - ASSESSMENT_IN_PROGRESS:
+      $ref: ./on_status/on_status_unsolicited.yaml
+on_cancel:
+  examples:
+    on_cancel:
+      $ref: ./on_cancel/on_cancel.yaml
